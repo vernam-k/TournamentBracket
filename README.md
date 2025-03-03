@@ -26,10 +26,7 @@ A comprehensive PHP-based tournament bracket management system that uses JSON fo
 4. Access the application through your web browser
 5. Log in as admin using the default credentials (see below)
 
-## Default Admin Credentials
-
-- **Username**: admin
-- **Password**: password123
+## Admin Credentials
 
 **Important**: Change the default admin password in `config.php` before deploying to production.
 

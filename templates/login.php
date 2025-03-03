@@ -99,20 +99,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </div>
         </div>
-        
-        <div class="card mt-4 shadow">
-            <div class="card-header bg-info text-white">
-                <h5 class="card-title mb-0"><i class="fas fa-info-circle me-2"></i>Demo Credentials</h5>
-            </div>
-            <div class="card-body">
-                <p><strong>Admin:</strong></p>
-                <ul>
-                    <li>Username: <code>admin</code></li>
-                    <li>Password: <code>password123</code></li>
-                </ul>
-                <p><strong>Regular User:</strong></p>
-                <p>Register a new account to access user features.</p>
-            </div>
-        </div>
     </div>
 </div>
