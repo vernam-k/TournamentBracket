@@ -3,6 +3,9 @@
  * Tournament Bracket System - Main Entry Point
  */
 
+// Start output buffering to allow header modifications after HTML output
+ob_start();
+
 // Include configuration
 require_once 'config.php';
 
@@ -72,3 +75,6 @@ include TEMPLATES_PATH . '/' . $allowed_pages[$page];
 
 // Include the footer
 include TEMPLATES_PATH . '/footer.php';
+
+// Flush the output buffer
+ob_end_flush();
