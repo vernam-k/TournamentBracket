@@ -1,0 +1,21 @@
+{
+    "tournaments": [
+        {
+            "id": "t67c518544c69145b258a6",
+            "name": "Sample Tournament",
+            "type": "single_elimination",
+            "status": "setup",
+            "created_at": "2025-03-02T20:47:48Z",
+            "created_by": "admin",
+            "participants": [
+                "p1",
+                "p2",
+                "p3",
+                "p4"
+            ],
+            "rounds": [],
+            "current_round": 0,
+            "winner": null
+        }
+    ]
+}

@@ -1,0 +1,152 @@
+/**
+ * Tournament Bracket System - Print Stylesheet
+ */
+
+/* Hide elements not needed for printing */
+@media print {
+    header, 
+    footer, 
+    .navbar, 
+    .btn,
+    .no-print,
+    form,
+    .alert {
+        display: none !important;
+    }
+    
+    /* Show only the tournament bracket when printing */
+    body * {
+        visibility: hidden;
+    }
+    
+    .tournament-bracket,
+    .tournament-bracket * {
+        visibility: visible;
+    }
+    
+    .tournament-bracket {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: visible !important;
+    }
+    
+    /* Ensure the bracket fits on the page */
+    .bracket-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .bracket-round {
+        margin-right: 20px;
+    }
+    
+    .bracket-match {
+        border: 1px solid #000;
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+    
+    .bracket-match-header {
+        background-color: #f0f0f0 !important;
+        border-bottom: 1px solid #000;
+        color: #000 !important;
+    }
+    
+    .bracket-participant {
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .bracket-participant.winner {
+        font-weight: bold;
+        color: #000 !important;
+    }
+    
+    .bracket-connector,
+    .bracket-connector-vertical {
+        background-color: #000;
+    }
+    
+    /* Round Robin Standings Table */
+    .standings-table {
+        visibility: visible;
+        page-break-inside: avoid;
+    }
+    
+    .standings-table th,
+    .standings-table td {
+        border: 1px solid #000;
+    }
+    
+    /* Tournament Information */
+    .card.shadow-sm:first-of-type {
+        visibility: visible;
+        position: relative;
+        border: none;
+        box-shadow: none !important;
+    }
+    
+    .card.shadow-sm:first-of-type .card-header {
+        background-color: #fff !important;
+        color: #000 !important;
+        border-bottom: 2px solid #000;
+    }
+    
+    .card.shadow-sm:first-of-type .card-body {
+        color: #000 !important;
+    }
+    
+    /* Page settings */
+    @page {
+        size: landscape;
+        margin: 1cm;
+    }
+    
+    /* Typography */
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 12pt;
+        line-height: 1.3;
+        color: #000 !important;
+        background-color: #fff !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    
+    h1 {
+        font-size: 18pt;
+        margin-top: 0;
+    }
+    
+    h2 {
+        font-size: 16pt;
+    }
+    
+    h3 {
+        font-size: 14pt;
+    }
+    
+    /* Add title and tournament info at the top */
+    .tournament-bracket::before {
+        content: "Tournament Bracket";
+        display: block;
+        font-size: 24pt;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        visibility: visible;
+    }
+    
+    /* Add page numbers */
+    @page {
+        @bottom-right {
+            content: "Page " counter(page) " of " counter(pages);
+        }
+    }
+}

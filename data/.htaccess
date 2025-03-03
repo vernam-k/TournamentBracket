@@ -1,0 +1,8 @@
+# Deny direct access to JSON files
+<Files "*.json">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Prevent directory listing
+Options -Indexes
