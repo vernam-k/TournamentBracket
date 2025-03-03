@@ -2,6 +2,10 @@
 
 A comprehensive PHP-based tournament bracket management system that uses JSON for data storage.
 
+<p align="center">
+  <img src="https://i.imgur.com/gPsilVd.png" alt="Tournament Bracket" width="650">
+</p>
+
 ## Features
 
 - **Multiple Tournament Types**: Support for single elimination, double elimination, and round robin tournaments
