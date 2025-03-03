@@ -125,7 +125,7 @@ You can customize the application by:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under The Unlicense - see the LICENSE file for details.
 
 ## Acknowledgments
 
