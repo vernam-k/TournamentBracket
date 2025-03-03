@@ -36,10 +36,9 @@
                     <p class="mb-0">&copy; <?php echo date('Y'); ?> <?php echo SITE_NAME; ?>. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/vernam-k/TournamentBracket" class="text-white" target="_blank" title="GitHub Repository">
+                        <i class="fab fa-github"></i> GitHub Repository
+                    </a>
                 </div>
             </div>
         </div>
