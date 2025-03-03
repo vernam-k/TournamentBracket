@@ -47,7 +47,6 @@ $active_tournaments = array_slice($active_tournaments, 0, 5);
                 </div>
             </div>
             <div class="col-md-4 d-none d-md-block">
-                <img src="<?php echo get_asset_url('images/tournament-bracket.svg'); ?>" alt="Tournament Bracket" class="img-fluid">
             </div>
         </div>
     </div>
