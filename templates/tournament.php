@@ -133,18 +133,37 @@ switch ($tournament['status']) {
                 <?php if (empty($participants)): ?>
                     <p class="text-muted">No participants yet.</p>
                 <?php else: ?>
-                    <ul class="list-group">
+                    <div class="accordion" id="participantsAccordion">
                         <?php foreach ($participants as $participant): ?>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                <?php echo htmlspecialchars($participant['name']); ?>
-                                <?php if ($tournament['winner'] === $participant['id']): ?>
-                                    <span class="badge bg-warning text-dark">
-                                        <i class="fas fa-trophy me-1"></i>Winner
-                                    </span>
-                                <?php endif; ?>
-                            </li>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="participant-heading-<?php echo $participant['id']; ?>">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#participant-collapse-<?php echo $participant['id']; ?>"
+                                            aria-expanded="false" aria-controls="participant-collapse-<?php echo $participant['id']; ?>">
+                                        <div class="d-flex justify-content-between align-items-center w-100">
+                                            <span><?php echo htmlspecialchars($participant['name']); ?></span>
+                                            <?php if ($tournament['winner'] === $participant['id']): ?>
+                                                <span class="badge bg-warning text-dark ms-2">
+                                                    <i class="fas fa-trophy me-1"></i>Winner
+                                                </span>
+                                            <?php endif; ?>
+                                        </div>
+                                    </button>
+                                </h2>
+                                <div id="participant-collapse-<?php echo $participant['id']; ?>" class="accordion-collapse collapse"
+                                     aria-labelledby="participant-heading-<?php echo $participant['id']; ?>"
+                                     data-bs-parent="#participantsAccordion">
+                                    <div class="accordion-body">
+                                        <?php if (!empty($participant['description'])): ?>
+                                            <p><?php echo htmlspecialchars($participant['description']); ?></p>
+                                        <?php else: ?>
+                                            <p class="text-muted">No description available.</p>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
                         <?php endforeach; ?>
-                    </ul>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>
